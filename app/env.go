@@ -1,4 +1,4 @@
-package main
+package app
 
 import (
 	"log"
@@ -10,7 +10,7 @@ type Env struct {
 	S Storage
 }
 
-func getEnv() *Env {
+func GetEnv() *Env {
 	addr := os.Getenv("APP_REDIS_ADDR")
 	if addr == "" {
 		addr = "localhost:6379"

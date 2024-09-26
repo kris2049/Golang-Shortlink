@@ -1,4 +1,4 @@
-package main
+package app
 
 import (
 	"context"
@@ -137,6 +137,7 @@ func (r *RedisClient) ShortlinkInfo(eid string) (interface{}, error) {
 	} else if err != nil {
 		return "", err
 	} else {
+		fmt.Print(d)
 		return d, nil
 	}
 }
